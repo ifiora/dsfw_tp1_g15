@@ -7,6 +7,7 @@ import Fiora from "./cards/Fiora";
 import Dojas from "./cards/Dojas";
 import Bari from "./cards/Bari";
 import Api from "./Api";
+import ContactForm from "./ContactForm";
 
 export default function App() {
   const links = [
@@ -68,6 +69,10 @@ export default function App() {
         <Route path="/api" element={<Api />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <footer>
+        <ContactForm></ContactForm>
+      </footer>
     </BrowserRouter>
   );
 }

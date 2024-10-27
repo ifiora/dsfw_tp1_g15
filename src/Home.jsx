@@ -1,5 +1,4 @@
 import React from "react";
-import ContactForm from "./ContactForm";
 
 export default class Home extends React.Component {
   render() {
@@ -12,7 +11,6 @@ export default class Home extends React.Component {
           <li>Javier Dojas</li>
           <li>Ignacio Fiora</li>
         </ul>
-        <ContactForm></ContactForm>
       </section>
     );
   }

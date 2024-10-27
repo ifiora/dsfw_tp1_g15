@@ -3,7 +3,7 @@ html {
   background-color: #e0e0e0;
 }
 
-nav.main{
+nav.main {
   position: fixed;
   right: 30px;
   top: 30px;
@@ -13,28 +13,26 @@ nav.main{
   border-radius: 10px;
 }
 
-
-
-nav.main .titulo{
+nav.main .titulo {
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-nav.main ul{
+nav.main ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-nav.main a{
+nav.main a {
   color: #333;
 }
 
-nav.main a.active{
-  color: blue;
+nav.main a.active {
+  color: #538AD4;
 }
 
-form{ 
+form {
   display: flex;
   flex-flow: column;
   width: 50%;
