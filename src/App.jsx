@@ -1,4 +1,4 @@
-import "./assets/App.css";
+import "./App.css";
 import { BrowserRouter, Route, NavLink, Routes } from "react-router-dom";
 
 import { NotFound } from "./NotFound";
@@ -7,10 +7,6 @@ import Fiora from "./Fiora";
 import Dojas from "./Dojas";
 import Bari from "./Bari";
 import Api from "./Api";
-
-import fotoFiora from "./assets/foto_fiora.jpg";
-import fotoDojas from "./assets/foto_dojas.jpg";
-import fotoBari from "./assets/foto_bari.jpg";
 
 export default function App() {
   const links = [
@@ -30,7 +26,7 @@ export default function App() {
         href: "https://www.linkedin.com/in/ignacio-fiora-6a02b229/",
         text: "Linkedin",
       },
-      img: fotoFiora,
+      img: "foto_fiora.jpg",
     },
     {
       name: "Javier Dojas",
@@ -40,7 +36,7 @@ export default function App() {
         href: "https://www.instagram.com/javidodge",
         text: "Instagram",
       },
-      img: fotoDojas,
+      img: "foto_dojas.jpg",
     },
     {
       name: "Pablo Bari",
@@ -50,7 +46,7 @@ export default function App() {
         href: "https://www.linkedin.com/in/pablo-bari-20b9a1214/",
         text: "Linkedin",
       },
-      img: fotoBari,
+      img: "foto_bari.jpg",
     },
   ];
 
