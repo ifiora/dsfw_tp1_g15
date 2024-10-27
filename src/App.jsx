@@ -3,9 +3,9 @@ import { BrowserRouter, Route, NavLink, Routes } from "react-router-dom";
 
 import { NotFound } from "./NotFound";
 import Home from "./Home";
-import Fiora from "./Fiora";
-import Dojas from "./Dojas";
-import Bari from "./Bari";
+import Fiora from "./cards/Fiora";
+import Dojas from "./cards/Dojas";
+import Bari from "./cards/Bari";
 import Api from "./Api";
 
 export default function App() {
