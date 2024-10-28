@@ -21,7 +21,9 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.1.0",
     "emailjs-com": "^3.2.0",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "styled-components": "^6.1.13"
   }
 }
