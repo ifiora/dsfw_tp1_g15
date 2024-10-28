@@ -6,7 +6,7 @@ import Home from "./Home";
 import Fiora from "./cards/Fiora";
 import Dojas from "./cards/Dojas";
 import Bari from "./cards/Bari";
-import Api from "./Api";
+import Api from "./api/Api";
 import ContactForm from "./ContactForm";
 
 export default function App() {
