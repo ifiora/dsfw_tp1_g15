@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Item = styled.section`
+const Item = styled.div`
   width: 320px;
   margin: 40px auto;
   padding: 20px;
@@ -10,6 +10,7 @@ const Item = styled.section`
   border-radius: 12px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: column;
 `;
 
@@ -28,13 +29,7 @@ const Title = styled.h1`
   color: #333;
   text-align: center;
   margin: 8px 0;
-  height: 50px;
-`;
-
-const Link = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 75px;
 `;
 
 export default class PhotoItem extends React.Component {
@@ -43,9 +38,7 @@ export default class PhotoItem extends React.Component {
     return (
       <Item>
         <Title>{data.title}</Title>
-        <Link href={data.url} target="_blank">
-          <Photo img={data.thumbnailUrl}></Photo>
-        </Link>
+        <Photo img={data.thumbnailUrl}></Photo>
       </Item>
     );
   }

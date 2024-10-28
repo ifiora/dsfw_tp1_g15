@@ -61,7 +61,6 @@ export default class Api extends React.Component {
   render() {
     return (
       <section id="api">
-        <h1>API</h1>
         <ButtonContainer
           handler={this.setPage}
           page={this.state.page}
