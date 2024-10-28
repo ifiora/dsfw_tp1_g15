@@ -27,12 +27,9 @@ export default class Api extends React.Component {
   }
 
   setPage(page) {
-    const startVal =
-      page < 1
-        ? 0
-        : page > itemCount / pageSize
-        ? itemCount - pageSize
-        : (page - 1) * pageSize;
+    page =
+      page < 1 ? 1 : page > itemCount / pageSize ? itemCount / pageSize : page;
+    const startVal = (page - 1) * pageSize;
 
     this.setState({ loading: true });
     fetch(
