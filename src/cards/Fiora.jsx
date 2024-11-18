@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import '@fontsource/montserrat';
+import "@fontsource/montserrat";
+import { BaseCard } from "./BaseCard";
 
 const Card = styled.section`
   width: 320px;
@@ -10,7 +11,7 @@ const Card = styled.section`
   border: 2px solid #ddd;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   transform: rotate(-2deg);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -20,7 +21,40 @@ const Card = styled.section`
   }
 `;
 
-const ProfileImage = styled.div`
+export default class Fiora extends BaseCard {
+  render() {
+    const { name, img, link, description, moreInfo } = this.props.data;
+
+    return (
+      <>
+        <Card>
+          <InfoComponent
+            img={img}
+            description={description}
+            name={name}
+            animating={this.state.isAnimating}
+          ></InfoComponent>
+          <LinksComponent
+            link={link}
+            animateHandler={this.animate}
+            toggleIsExpandedHandler={this.toggleIsExpanded}
+            expanded={this.state.isExpanded}
+          ></LinksComponent>
+        </Card>
+
+        {this.renderExpandableContent(
+          <Card>
+            <ExpandableContent data={moreInfo}></ExpandableContent>
+          </Card>
+        )}
+      </>
+    );
+  }
+}
+
+const ProfileImage = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "isAnimating",
+})`
   width: 100%;
   height: 240px;
   background-image: url(${(props) => props.img});
@@ -28,6 +62,8 @@ const ProfileImage = styled.div`
   background-position: center;
   border-radius: 8px;
   margin-bottom: 10px;
+  transform: ${(props) => (props.isAnimating ? "scale(1.3)" : "scale(1)")};
+  transition: transform 0.5s ease;
 `;
 
 const Description = styled.p`
@@ -47,6 +83,17 @@ const Title = styled.h1`
   margin: 8px 0;
 `;
 
+class InfoComponent extends React.Component {
+  render() {
+    return (
+      <>
+        <ProfileImage img={this.props.img} isAnimating={this.props.animating} />
+        <Description>{this.props.description}</Description>
+        <Title>{this.props.name}</Title>
+      </>
+    );
+  }
+}
 
 const LinkButton = styled.a`
   display: block;
@@ -62,20 +109,43 @@ const LinkButton = styled.a`
   }
 `;
 
-export default class Fiora extends React.Component {
+class LinksComponent extends React.Component {
   render() {
-    const { name, img, link, description } = this.props.data;
-
     return (
-      <Card>
-        <ProfileImage img={img} />
-        <Description>{description}</Description>
-        <Title>{name}</Title>
-        <LinkButton href={link.href} target="_blank">
-          {link.text}
+      <>
+        <LinkButton href={this.props.link.href} target="_blank">
+          {this.props.link.text}
         </LinkButton>
-      </Card>
+        <LinkButton href="#" onClick={() => this.props.animateHandler(500)}>
+          Animar
+        </LinkButton>
+        <LinkButton
+          href="#"
+          onClick={() => this.props.toggleIsExpandedHandler()}
+        >
+          {!this.props.expanded ? "Más info" : "Menos info"}
+        </LinkButton>
+      </>
     );
   }
 }
 
+const Container = styled.div`
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+`;
+
+class ExpandableContent extends React.Component {
+  render() {
+    const info = this.props.data;
+
+    return (
+      <Container>
+        <Description>{info.hobbies}</Description>
+        <Description>{info.workExperience}</Description>
+      </Container>
+    );
+  }
+}

@@ -4,7 +4,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <section id="home">
-        <h1>Trabajo Practico Nº 1</h1>
+        <h1>Trabajo Practico Grupal DSWF - Grupo 15</h1>
         <h2>Integrantes:</h2>
         <ul>
           <li>Pablo Bari</li>

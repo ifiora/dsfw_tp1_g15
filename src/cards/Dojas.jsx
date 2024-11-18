@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import '@fontsource/montserrat';
+import "@fontsource/montserrat";
+import { BaseCard } from "./BaseCard";
 
 const Card = styled.section`
   width: 60%;
@@ -12,8 +13,8 @@ const Card = styled.section`
   border-radius: 15px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: "Montserrat", sans-serif;
+
   &:hover {
     transform: scale(1.02);
     box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
@@ -64,17 +65,129 @@ const Description = styled.p`
   padding: 0 20px;
 `;
 
-export default class Dojas extends React.Component {
+export default class Dojas extends BaseCard {
   render() {
     return (
-      <Card>
-        <Title>{this.props.data.name}</Title>
-        <ProfileImage src={this.props.data.img} alt="Profile" />
-        <LinkButton href={this.props.data.link.href} target="_blank">
-          {this.props.data.link.text}
+      <>
+        <Card>
+          <Header
+            name={this.props.data.name}
+            img={this.props.data.img}
+            animateHandler={this.animate}
+            animating={this.state.isAnimating}
+          ></Header>
+          <Buttons
+            link={this.props.data.link}
+            animateHandler={this.animate}
+            toggleIsExpandedHandler={this.toggleIsExpanded}
+            expanded={this.state.isExpanded}
+          ></Buttons>
+          <DescriptionComponent
+            text={this.props.data.description}
+            animating={this.state.isAnimating}
+          ></DescriptionComponent>
+        </Card>
+
+        {this.renderExpandableContent(
+          <Card>
+            <ExpandableContent
+              data={this.props.data.moreInfo}
+            ></ExpandableContent>
+          </Card>
+        )}
+      </>
+    );
+  }
+}
+
+class Header extends React.Component {
+  render() {
+    return (
+      <>
+        <Title>{this.props.name}</Title>
+        <ProfileImage src={this.props.img} alt="Profile" />
+      </>
+    );
+  }
+}
+
+const shake = `
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    12.5% { transform: translateX(-10px); }
+    25% { transform: translateX(10px); }
+    37.5% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    62.5% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+    87.5% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+`;
+
+const AnimatedDescription = styled.p.withConfig({
+  shouldForwardProp: (prop) => prop !== "isAnimating",
+})`
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
+  ${(props) =>
+    props.isAnimating &&
+    `
+    animation: shake 0.5s ease-in-out;
+  `}
+  ${shake}
+`;
+
+class DescriptionComponent extends React.Component {
+  render() {
+    return (
+      <AnimatedDescription isAnimating={this.props.animating}>
+        {this.props.text}
+      </AnimatedDescription>
+    );
+  }
+}
+
+class Buttons extends React.Component {
+  render() {
+    return (
+      <>
+        <LinkButton href={this.props.link.href} target="_blank">
+          {this.props.link.text}
         </LinkButton>
-        <Description>{this.props.data.description}</Description>
-      </Card>
+        <LinkButton href="#" onClick={() => this.props.animateHandler(1000)}>
+          Animar
+        </LinkButton>
+        <LinkButton
+          href="#"
+          onClick={() => this.props.toggleIsExpandedHandler()}
+        >
+          {this.props.expanded ? "Mostrar menos" : "Mostrar más"}
+        </LinkButton>
+      </>
+    );
+  }
+}
+
+const Container = styled.div`
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+`;
+
+class ExpandableContent extends React.Component {
+  render() {
+    const info = this.props.data;
+
+    return (
+      <Container>
+        <Description>{info.aboutMe}</Description>
+        <Description>{info.education}</Description>
+      </Container>
     );
   }
 }

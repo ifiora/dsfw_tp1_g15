@@ -2,9 +2,10 @@
   {
     "name": "Ignacio Fiora",
     "description": "Mi nombre es Ignacio, tengo 38 años. Trabajo como programador freelance y en mi tiempo libre disfruto practicar Taekwondo y jugar al Fútbol.",
-    "hobbies": "Me gusta la música, estudio Bandoneón en el Conservatorio de Pergamino, y toco la batería. Compartí escenario con La Renga.",
-    "workExperience": "Desarrollador Cobol en el Banco Santander y migrando un sistema RM/Cobol a .NET para una obra social. Antes de trabajar como Dev, programaba controles numéricos para la industria de la madera.",
-    "education": "Estudié Lic. En Sistemas hasta 3er año y actualmente estoy en el segundo año de Tec. en Desarrollo de Software. Realicé cursos sobre SQL, JS, NODE, y DEV IBM.",
+    "moreInfo": {
+      "hobbies": "Soy apasionado por la computación en general, disfruto mucho de los videojuegos y hacer deporte. Juego a la pelota con amigos y estoy entrenando para graduarme de cinturón negro de Taekwondo el año que viene.",
+      "workExperience": "Laboralmente me gusta emprender y ser mi propio jefe. Trabajo como desarrollador web hace mas de 10 años y actualmente soy CTO de Donarg, una ONG que ofrece soluciones informaticas para centros de hemoterapia."
+    },
     "link": {
       "href": "https://www.linkedin.com/in/ignacio-fiora-6a02b229/",
       "text": "Linkedin"
@@ -14,8 +15,10 @@
   {
     "name": "Javier Dojas",
     "description": "Me gustan los deportes y los videojuegos. Actualmente estoy concentrándome en el running, poniéndole mucha dedicación para estar a punto para las carreras de 10km de fin de año.",
-    "aboutMe": "Actualmente vivo en Olivos, y es un lugar que me gusta mucho, ya que tiene un vial costero que tiene mucho verde y es un hermoso lugar para entrenar o pasear.",
-    "education": "En cuanto a mis estudios, tengo una licenciatura en Marketing, area en que me desempeñe durante muchos años, pero actualmente estoy realizando una Tecnicatura en Desarollo de Software. Tambien me apasiona el mundo de las finanzas, y las inversiones bursatiles, me gustaria poder realizar algun tipo de estudio que se focalice en esa area.",
+    "moreInfo": {
+      "aboutMe": "Actualmente vivo en Olivos, y es un lugar que me gusta mucho, ya que tiene un vial costero que tiene mucho verde y es un hermoso lugar para entrenar o pasear.",
+      "education": "En cuanto a mis estudios, tengo una licenciatura en Marketing, area en que me desempeñe durante muchos años, pero actualmente estoy realizando una Tecnicatura en Desarollo de Software. Tambien me apasiona el mundo de las finanzas, y las inversiones bursatiles, me gustaria poder realizar algun tipo de estudio que se focalice en esa area."
+    },
     "link": {
       "href": "https://www.instagram.com/javidodge",
       "text": "Instagram"
@@ -25,9 +28,11 @@
   {
     "name": "Pablo Bari",
     "description": "Allá por el 2003 terminé mis estudios en sistemas, pero por problemas de la vida, nunca pude trabajar en el sector. Desde el año 2020 me propuse actualizarme en las nuevas tecnologías de desarrollo.",
-    "hobbies": "Me gusta la música, estudio Bandoneón en el Conservatorio de Pergamino, y toco la batería. Compartí escenario con La Renga.",
-    "workExperience": "Desarrollador Cobol en el Banco Santander y migrando un sistema RM/Cobol a .NET para una obra social. Antes de trabajar como Dev, programaba controles numéricos para la industria de la madera.",
-    "education": "Estudié Lic. En Sistemas hasta 3er año y actualmente estoy en el segundo año de Tec. en Desarrollo de Software. Realicé cursos sobre SQL, JS, NODE, y DEV IBM.",
+    "moreInfo": {
+      "hobbies": "Como hobby me gusta mucho la música, estudio Tenicatura en Bandoneón en el Conservatorio de Musica de Pergamino y toco la batería, gracias a este ultimo instrumento pude compartir escenario con la banda argentina de rock La Renga.",
+      "workExperience": "Trabajo como Desarrollador Cobol en el Banco Santander y adicionalmente estoy migrando un sistema RM/Cobol a .NET para una obra social. Antes de trabajar como Dev programaba controles numéricos para la industria de la madera.",
+      "education": "Respecto a la Educación estudié Lic. En Sistemas hasta 3er año y actualmente me encuentro en el segundo de Tec En desarroolo de software.Me gusta mucho hacer cursos profesionalizantes, tengo cursos realizados sobre SQL, JS, NODE, DEV IBM:"
+    },
     "link": {
       "href": "https://www.linkedin.com/in/pablo-bari-20b9a1214/",
       "text": "Linkedin"
