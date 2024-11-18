@@ -20,7 +20,7 @@ nav.main {
   right: 30px;
   top: 30px;
   z-index: 5;
-  background-color: aliceblue;
+  background-color: #fff;
   padding: 10px 15px;
   border-radius: 10px;
 }
@@ -44,21 +44,15 @@ nav.main a.active {
   color: #538ad4;
 }
 
-form {
-  display: flex;
-  flex-flow: column;
-  width: 50%;
-  max-width: 300px;
-}
-
 footer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   align-self: flex-end;
+  background-color: #FFFFFF50;
 }
 
 #api {
@@ -70,4 +64,53 @@ footer {
   flex-flow: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Estilos formulario */
+form {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  gap: 50px;
+  justify-content: center;
+}
+
+form .form-container {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+
+  width: 200px;
+}
+
+form input[type="text"],
+form input[type="email"],
+textarea {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+form > p {
+  width: 200px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  height: 100%;
+  padding: 20px;
+}
+
+form button {
+  box-sizing: content-box;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  background-color: #333333;
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #33333380;
 }
