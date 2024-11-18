@@ -2,6 +2,18 @@ html {
   font-family: "Roboto", sans-serif;
   background-color: #e0e0e0;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  box-sizing: content-box;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
 
 nav.main {
   position: fixed;
@@ -29,7 +41,7 @@ nav.main a {
 }
 
 nav.main a.active {
-  color: #538AD4;
+  color: #538ad4;
 }
 
 form {
@@ -39,20 +51,21 @@ form {
   max-width: 300px;
 }
 
-footer{
+footer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  align-self: flex-end;
 }
 
-#api{
+#api {
   margin-top: 50px;
 }
 
-#home{
+#home {
   display: flex;
   flex-flow: column;
   align-items: center;

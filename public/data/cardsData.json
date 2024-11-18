@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Ignacio Fiora",
+    "description": "Mi nombre es Ignacio, tengo 38 años. Trabajo como programador freelance y en mi tiempo libre disfruto practicar Taekwondo y jugar al Fútbol.",
+    "hobbies": "Me gusta la música, estudio Bandoneón en el Conservatorio de Pergamino, y toco la batería. Compartí escenario con La Renga.",
+    "workExperience": "Desarrollador Cobol en el Banco Santander y migrando un sistema RM/Cobol a .NET para una obra social. Antes de trabajar como Dev, programaba controles numéricos para la industria de la madera.",
+    "education": "Estudié Lic. En Sistemas hasta 3er año y actualmente estoy en el segundo año de Tec. en Desarrollo de Software. Realicé cursos sobre SQL, JS, NODE, y DEV IBM.",
+    "link": {
+      "href": "https://www.linkedin.com/in/ignacio-fiora-6a02b229/",
+      "text": "Linkedin"
+    },
+    "img": "foto_fiora.jpg"
+  },
+  {
+    "name": "Javier Dojas",
+    "description": "Me gustan los deportes y los videojuegos. Actualmente estoy concentrándome en el running, poniéndole mucha dedicación para estar a punto para las carreras de 10km de fin de año.",
+    "aboutMe": "Actualmente vivo en Olivos, y es un lugar que me gusta mucho, ya que tiene un vial costero que tiene mucho verde y es un hermoso lugar para entrenar o pasear.",
+    "education": "En cuanto a mis estudios, tengo una licenciatura en Marketing, area en que me desempeñe durante muchos años, pero actualmente estoy realizando una Tecnicatura en Desarollo de Software. Tambien me apasiona el mundo de las finanzas, y las inversiones bursatiles, me gustaria poder realizar algun tipo de estudio que se focalice en esa area.",
+    "link": {
+      "href": "https://www.instagram.com/javidodge",
+      "text": "Instagram"
+    },
+    "img": "foto_dojas.jpg"
+  },
+  {
+    "name": "Pablo Bari",
+    "description": "Allá por el 2003 terminé mis estudios en sistemas, pero por problemas de la vida, nunca pude trabajar en el sector. Desde el año 2020 me propuse actualizarme en las nuevas tecnologías de desarrollo.",
+    "hobbies": "Me gusta la música, estudio Bandoneón en el Conservatorio de Pergamino, y toco la batería. Compartí escenario con La Renga.",
+    "workExperience": "Desarrollador Cobol en el Banco Santander y migrando un sistema RM/Cobol a .NET para una obra social. Antes de trabajar como Dev, programaba controles numéricos para la industria de la madera.",
+    "education": "Estudié Lic. En Sistemas hasta 3er año y actualmente estoy en el segundo año de Tec. en Desarrollo de Software. Realicé cursos sobre SQL, JS, NODE, y DEV IBM.",
+    "link": {
+      "href": "https://www.linkedin.com/in/pablo-bari-20b9a1214/",
+      "text": "Linkedin"
+    },
+    "img": "foto_bari.jpg"
+  }
+]
