@@ -52,7 +52,7 @@ footer {
   padding-top: 30px;
   padding-bottom: 30px;
   align-self: flex-end;
-  background-color: #FFFFFF50;
+  background-color: #ffffff50;
 }
 
 #api {
@@ -64,6 +64,45 @@ footer {
   flex-flow: column;
   align-items: center;
   justify-content: center;
+}
+
+#home h1 {
+  border: 2px solid #333;
+  padding: 10px 20px;
+  width: 50vw;
+  text-align: center;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+#home .caratula {
+  padding: 30px;
+  min-height: 400px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  
+  width: 40vw;
+  background-color: #fff;
+  border-bottom: 2px solid #333;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 1.2em;
+}
+
+
+
+.caratula ul {
+  list-style-type: none;
+}
+
+.caratula ul .title{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.caratula ul .indent{
+  padding-left: 20px;
 }
 
 /* Estilos formulario */
